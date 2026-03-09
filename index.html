@@ -9,49 +9,45 @@
 </head>
 
 <body>
-    <div class="gallery-container">
-        <header class="gallery-header">
-            <h1>Accessible Photo Gallery</h1>
-            <p>A collection of beautiful images with accessibility features for all users</p>
-        </header>
+    <div class="container">
+        <h1>Accessible Photo Gallery</h1>
 
-        <main class="gallery">
-            <figure>
-                <img src="https://picsum.photos/300/250?random=1"
-                    alt="A serene mountain landscape with a lake reflecting the snow-capped peaks" loading="lazy">
-                <figcaption>Serene Mountain Landscape</figcaption>
-            </figure>
+        <!-- Upload Button -->
+        <div class="upload-section">
+            <label for="photo-upload" class="upload-button">Upload Your Photo</label>
+            <input type="file" id="photo-upload" accept="image/*" hidden>
+        </div>
 
-            <figure>
-                <img src="https://picsum.photos/300/250?random=2" alt="A vibrant sunset over a calm ocean"
-                    loading="lazy">
-                <figcaption>Vibrant Ocean Sunset</figcaption>
-            </figure>
+        <div id="image">
+            <img id="display-img" src="" alt="" style="display: none;">
+            <span id="alt-text">Hover over an image below to display here.</span>
+        </div>
 
-            <figure>
-                <img src="https://picsum.photos/300/250?random=3"
-                    alt="A dense forest with sunlight filtering through the trees" loading="lazy">
-                <figcaption>Dense Forest Sunlight</figcaption>
-            </figure>
+        <div class="thumbnails">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop"
+                alt="A serene mountain landscape with a lake reflecting the snow-capped peaks" class="thumbnail"
+                onmouseover="upDate(this)" onmouseout="undo()">
 
-            <figure>
-                <img src="https://picsum.photos/300/250?random=4"
-                    alt="A snow-covered winter scene with trees and a wooden cabin" loading="lazy">
-                <figcaption>Winter Cabin Scene</figcaption>
-            </figure>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop"
+                alt="A vibrant sunset over a calm ocean" class="thumbnail" onmouseover="upDate(this)"
+                onmouseout="undo()">
 
-            <figure>
-                <img src="https://picsum.photos/300/250?random=5"
-                    alt="A colorful autumn forest with red and orange leaves" loading="lazy">
-                <figcaption>Colorful Autumn Forest</figcaption>
-            </figure>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop"
+                alt="A dense forest with sunlight filtering through the trees" class="thumbnail"
+                onmouseover="upDate(this)" onmouseout="undo()">
 
-            <figure>
-                <img src="https://picsum.photos/300/250?random=6"
-                    alt="A desert landscape with rock formations at sunset" loading="lazy">
-                <figcaption>Desert Rock Formations</figcaption>
-            </figure>
-        </main>
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&h=300&fit=crop"
+                alt="A snow-covered winter scene with trees and a wooden cabin" class="thumbnail"
+                onmouseover="upDate(this)" onmouseout="undo()">
+
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop"
+                alt="A colorful autumn forest with red and orange leaves" class="thumbnail" onmouseover="upDate(this)"
+                onmouseout="undo()">
+
+            <img src="https://images.unsplash.com/photo-1769517250293-4cf824920480?w=400&h=300&fit=crop"
+                alt="A desert landscape with rock formations at sunset" class="thumbnail" onmouseover="upDate(this)"
+                onmouseout="undo()">
+        </div>
     </div>
 
     <script src="script.js"></script>
